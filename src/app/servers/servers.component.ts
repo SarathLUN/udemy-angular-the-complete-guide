@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '[app-servers]',
+  selector: '.app-servers',
   // templateUrl: './servers.component.html',
   template: `
-    <p>Using attribute selector.</p>
+    <p>Using html class selector.</p>
     <hr>
   `,
   styleUrls: ['./servers.component.css']
