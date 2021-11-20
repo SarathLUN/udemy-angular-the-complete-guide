@@ -7,16 +7,5 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   userName = "";
-  isEnableBtnResetUserName = true;
 
-  // check if userName is not empty
-  onUpdateUserName(event: Event) {
-    console.log(event);
-    this.isEnableBtnResetUserName = (<HTMLInputElement>event.target).value === "";
-  }
-
-  onResetUserName() {
-    this.userName = "";
-    this.isEnableBtnResetUserName = true;
-  }
 }
