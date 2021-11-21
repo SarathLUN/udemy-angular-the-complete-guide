@@ -11,7 +11,7 @@ export class AppComponent {
 
   onToggleDetail() {
     this.showParagraph = !this.showParagraph;
-    const items = this.myLogs.length + 1;
+    const items = new Date();
     this.myLogs.push(items);
     console.log(this.myLogs);
   }

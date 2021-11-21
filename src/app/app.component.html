@@ -14,18 +14,28 @@
         </li>
       </ol>
       <hr>
-      <button class="btn btn-primary" (click)="showParagraph=!showParagraph">Display Detail</button>
-      <button class="btn btn-primary" (click)="onToggleDetail()">Display Detail with Log</button>
+      <form class="row row-cols-lg-auto g-3 align-items-center" action="#">
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" (click)="showParagraph=!showParagraph">Display Detail</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" (click)="onToggleDetail()">Display Detail with Log</button>
+          </div>
+        </div>
+      </form>
       <p *ngIf="showParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, delectus deleniti
         eaque eius enim exercitationem fugit illo impedit ipsam maiores molestiae perspiciatis quisquam recusandae
         rerum, tempore. Eligendi quod repudiandae tempora.</p>
       <div class="row">
         <div class="col-sm-12"
-             *ngFor="let l of myLogs"
-             [ngStyle]="{backgroundColor:l>=5?'blue':'none'}"
-             [ngClass]="{'white-text':l>=5}"
+             *ngFor="let l of myLogs; let i=index"
+             [ngStyle]="{backgroundColor:i>=4?'blue':'none'}"
+             [ngClass]="{'white-text':i>=4}"
         >
-          {{l}}
+          {{'Index ' + i + ' was clicked at ' + l}}
         </div>
       </div>
     </div>
