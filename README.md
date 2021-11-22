@@ -83,6 +83,7 @@ Let try to use both approaches (manually and CLI generate) to create components
 └── header.component.ts
 ```
 - then implement Angular component in `header.component.ts`
+- then register in `app.module.ts`
 
 #### RecipesComponent:
 - I will generate this component from CLI
