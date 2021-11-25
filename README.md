@@ -116,3 +116,4 @@ Error: src/app/app.component.ts:9:3 - error TS7008: Member 'servers' implicitly 
 
 - In this video, we use Chrome developer tools -> Sources to debug our code
 - We can debug directly on TypeScript `webpack:///./src/app/app.component.ts` 
+![debug in Chrome](doc-assets/img/debug-in-chrome.png)
