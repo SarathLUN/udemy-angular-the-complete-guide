@@ -111,3 +111,8 @@ Error: src/app/app.component.ts:9:3 - error TS7008: Member 'servers' implicitly 
 ```typescript
 	servers: string[] = [];
 ```
+
+### 063 Debugging Code in the Browser Using Sourcemaps
+
+- In this video, we use Chrome developer tools -> Sources to debug our code
+- We can debug directly on TypeScript `webpack:///./src/app/app.component.ts` 
