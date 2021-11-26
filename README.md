@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+---
+
+# Video: 065 Splitting Apps into Components
+
+- generate components
+
+```shell
+ng g c cockpit --skip-tests true # g = generate, c = component
+ng g c server-element --skip-tests true
+```
+
+- then we start to split the components
