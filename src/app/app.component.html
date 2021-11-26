@@ -8,7 +8,9 @@
         <li
           class="list-group-item"
           *ngFor="let server of servers; let i = index"
-          (click)="onRemoveServer(i)">{{ server }}</li>
+          (click)="onRemoveServer(i)">
+			{{ server }}
+		</li>
       </ul>
     </div>
   </div>
