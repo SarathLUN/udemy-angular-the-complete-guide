@@ -42,3 +42,7 @@ ng g c server-element --skip-tests true
 # Video: 067 Binding to Custom Properties
 
 - use `@Input()` decoration to bind custom proper from parent component into child component
+
+# Video: 069 Binding to Custom Events
+
+- use `@Output()` decoration to bind custom event from child component to parent component
