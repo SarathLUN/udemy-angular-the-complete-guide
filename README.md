@@ -38,3 +38,7 @@ ng g c server-element --skip-tests true
 ```
 
 - then we start to split the components
+
+# Video: 067 Binding to Custom Properties
+
+- use `@Input()` decoration to bind custom proper from parent component into child component
