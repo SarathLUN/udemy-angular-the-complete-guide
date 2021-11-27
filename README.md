@@ -46,3 +46,20 @@ ng g c server-element --skip-tests true
 # Video: 069 Binding to Custom Events
 
 - use `@Output()` decoration to bind custom event from child component to parent component
+
+# Video: 073 More on View Encapsulation
+
+- use `encapsulation` to change behavior on how CSS applied on component
+- `Emulated`: default from Angular
+- `None`: will disable the encapsulation, there for, the CSS selector is worked as global
+- `Native`: this will use **ShadowDom** that may not support by some browser
+
+```typescript
+@Component({
+  selector: 'app-server-element',
+  templateUrl: './server-element.component.html',
+  styleUrls: ['./server-element.component.css'],
+  encapsulation: ViewEncapsulation.Emulated // None, Native
+})
+
+```
