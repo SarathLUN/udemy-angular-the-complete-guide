@@ -63,3 +63,8 @@ ng g c server-element --skip-tests true
 })
 
 ```
+
+# Video: 076 Getting Access to the Template & DOM with @ViewChild
+
+- You should not change HTML element through this, as Angular provide better ways to manipulate the DOM.
+- It will be mess
