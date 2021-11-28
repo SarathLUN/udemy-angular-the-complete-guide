@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   serverElements = [
-    {type: "server", name: "test server", content: "just a test!"}
+    {type: 'server', name: 'test server', content: 'just a test!'}
   ];
 
   onServerAdded(serverData: { serverName: string, serverContent: string }) {
@@ -26,4 +26,13 @@ export class AppComponent {
     });
   }
 
+  onChangeFirst() {
+    this.serverElements[0].name = 'Changed!';
+  }
+
+  onDestroyFirst() {
+    console.log('before destroy');
+    this.serverElements.splice(0, 1);
+    console.log('after destroy');
+  }
 }
