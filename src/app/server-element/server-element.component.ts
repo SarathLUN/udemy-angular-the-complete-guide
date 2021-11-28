@@ -2,11 +2,11 @@ import {
   AfterContentChecked,
   AfterContentInit, AfterViewChecked, AfterViewInit,
   Component,
-  DoCheck,
+  DoCheck, ElementRef,
   Input,
   OnChanges, OnDestroy,
   OnInit,
-  SimpleChanges,
+  SimpleChanges, ViewChild,
   ViewEncapsulation
 } from '@angular/core';
 
@@ -28,6 +28,7 @@ export class ServerElementComponent implements OnInit,
 {
   @Input('srvElement') element: { type: string, name: string, content: string };
   @Input() name: string;
+  @ViewChild('heading') heading: ElementRef;
 
   constructor() {
     console.log('constructor called!');
@@ -35,6 +36,7 @@ export class ServerElementComponent implements OnInit,
 
   ngOnInit(): void {
     console.log('ngOnInit called!');
+    console.log(this.heading.nativeElement.textContent); // this will get an error
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -60,6 +62,7 @@ export class ServerElementComponent implements OnInit,
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called!');
+    console.log(this.heading.nativeElement.textContent); // this will display the header text
   }
 
   ngOnDestroy(): void {

@@ -73,3 +73,10 @@ ng g c server-element --skip-tests true
 
 - [Lifecycle hooks](https://angular.io/guide/lifecycle-hooks)
 
+# Video: 080 Lifecycle Hooks and Template Access
+
+- I got error, instead of just blank output console
+- but after view initialize, I got header text output
+- this is correct logic flow
+
+![080_Lifecycle_Hooks_and_Template_Access](doc-assets/080_Lifecycle_Hooks_and_Template_Access.png)
