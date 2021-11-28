@@ -68,3 +68,8 @@ ng g c server-element --skip-tests true
 
 - You should not change HTML element through this, as Angular provide better ways to manipulate the DOM.
 - It will be mess
+
+# Video: 078 lifecycle
+
+- [Lifecycle hooks](https://angular.io/guide/lifecycle-hooks)
+
