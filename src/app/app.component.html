@@ -5,22 +5,19 @@
 				Toggle Odd/Even
 			</button>
 
-			<ul class="list-group">
-				<div *ngIf="onlyOdd">
-					<li class="list-group-item"
-						*ngFor="let odd of oddNumbers"
-					>
-						{{odd}}
-					</li>
-				</div>
-				<div *ngIf="!onlyOdd">
-					<li class="list-group-item"
-						*ngFor="let even of evenNumbers"
-					>
-						{{even}}
-					</li>
-				</div>
-
+			<ul class="list-group" *ngIf="onlyOdd">
+				<li class="list-group-item"
+					*ngFor="let odd of oddNumbers"
+				>
+					{{odd}}
+				</li>
+			</ul>
+			<ul class="list-group" *ngIf="!onlyOdd">
+				<li class="list-group-item"
+					*ngFor="let even of evenNumbers"
+				>
+					{{even}}
+				</li>
 			</ul>
 		</div>
 	</div>
