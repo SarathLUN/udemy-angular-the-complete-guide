@@ -6,7 +6,7 @@ import {Directive, HostBinding, HostListener, Input, OnInit} from '@angular/core
 export class BetterHighlightDirective implements OnInit {
 
 	@Input() defaultBgColor: string = 'transparent';
-	@Input() highlightBgColor: string = 'blue';
+	@Input('appBetterHighlight') highlightBgColor: string = 'blue'; // if we have only one property for directive, we can use alias
 	@HostBinding('style.backgroundColor') backgroundColor: string | undefined;
 	@HostBinding('style.color') color: string = 'black';
 
