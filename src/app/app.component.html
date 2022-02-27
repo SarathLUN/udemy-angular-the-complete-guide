@@ -23,10 +23,20 @@
 					{{even}}
 				</li>
 			</ul>
+			<ng-template [ngIf]="!onlyOdd">
+				<!-- structural directive behind the scenes is transformed to ng-template -->
+				<ul class="list-group">
+					<li class="list-group-item"
+						[ngClass]="{even: even % 2 === 0}"
+						[ngStyle]="{backgroundColor:even % 2 === 0?'orange':'transparent'}"
+						*ngFor="let even of evenNumbers"
+					>
+						{{even}}
+					</li>
+				</ul>
+			</ng-template>
 		</div>
 	</div>
 	<p appBasicHighlight>Style me with basic directive!</p>
 	<p [appBetterHighlight]="'red'" defaultBgColor="yellow" >Style me with better directive!</p>
-	<!-- you can add property binding without square brackets if you then also omit the single quotation marks.
-	be careful that if you use it, it's really clear that this is property binding, that no one thinks that this could be a real attribute existing for the element you placed it on, then there is absolutely fine to be used. -->
 </div>
