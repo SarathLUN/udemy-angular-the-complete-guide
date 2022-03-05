@@ -14,27 +14,27 @@
 					{{odd}}
 				</li>
 			</ul>
-<!--			<ul class="list-group" *ngIf="!onlyOdd">-->
-<!--				<li class="list-group-item"-->
-<!--					[ngClass]="{even: even % 2 === 0}"-->
-<!--					[ngStyle]="{backgroundColor:even % 2 === 0?'orange':'transparent'}"-->
-<!--					*ngFor="let even of evenNumbers"-->
-<!--				>-->
-<!--					{{even}}-->
-<!--				</li>-->
-<!--			</ul>-->
-<!--			<ng-template [ngIf]="!onlyOdd">-->
-<!--				&lt;!&ndash; structural directive behind the scenes is transformed to ng-template &ndash;&gt;-->
-<!--				<ul class="list-group">-->
-<!--					<li class="list-group-item"-->
-<!--						[ngClass]="{even: even % 2 === 0}"-->
-<!--						[ngStyle]="{backgroundColor:even % 2 === 0?'orange':'transparent'}"-->
-<!--						*ngFor="let even of evenNumbers"-->
-<!--					>-->
-<!--						{{even}}-->
-<!--					</li>-->
-<!--				</ul>-->
-<!--			</ng-template>-->
+			<!--			<ul class="list-group" *ngIf="!onlyOdd">-->
+			<!--				<li class="list-group-item"-->
+			<!--					[ngClass]="{even: even % 2 === 0}"-->
+			<!--					[ngStyle]="{backgroundColor:even % 2 === 0?'orange':'transparent'}"-->
+			<!--					*ngFor="let even of evenNumbers"-->
+			<!--				>-->
+			<!--					{{even}}-->
+			<!--				</li>-->
+			<!--			</ul>-->
+			<!--			<ng-template [ngIf]="!onlyOdd">-->
+			<!--				&lt;!&ndash; structural directive behind the scenes is transformed to ng-template &ndash;&gt;-->
+			<!--				<ul class="list-group">-->
+			<!--					<li class="list-group-item"-->
+			<!--						[ngClass]="{even: even % 2 === 0}"-->
+			<!--						[ngStyle]="{backgroundColor:even % 2 === 0?'orange':'transparent'}"-->
+			<!--						*ngFor="let even of evenNumbers"-->
+			<!--					>-->
+			<!--						{{even}}-->
+			<!--					</li>-->
+			<!--				</ul>-->
+			<!--			</ng-template>-->
 			<ul class="list-group" *appUnless="onlyOdd">
 				<li
 					class="list-group-item"
@@ -46,5 +46,12 @@
 		</div>
 	</div>
 	<p appBasicHighlight>Style me with basic directive!</p>
-	<p [appBetterHighlight]="'red'" defaultBgColor="yellow" >Style me with better directive!</p>
+	<p [appBetterHighlight]="'red'" defaultBgColor="yellow">Style me with better directive!</p>
+
+	<div [ngSwitch]="myValue">
+		<p *ngSwitchCase="5">Value is 5</p>
+		<p *ngSwitchCase="10">Value is 10</p>
+		<p *ngSwitchCase="100">Value is 100</p>
+		<p *ngSwitchDefault>Value is default</p>
+	</div>
 </div>
