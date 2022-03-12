@@ -1,1 +1,16 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group-item list-group-item-action" aria-current="true" *ngIf="recipe">
+	<div class="d-flex">
+		<div class="flex-grow-1 ms-3 pe-3">
+			<h5 class="mb-1">{{recipe.name}}</h5>
+			<p class="mb-1">{{recipe.description}}</p>
+		</div>
+		<div class="flex-shrink-0 me-3">
+			<img
+				[src]="recipe.imagePath"
+				class="img-fluid"
+				alt="{{recipe.name}}"
+				style="max-height: 100px;"
+			/>
+		</div>
+	</div>
+</a>
