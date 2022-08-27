@@ -1,4 +1,6 @@
-<a href="#" class="list-group-item list-group-item-action" aria-current="true" *ngIf="recipe">
+<a href="#" class="list-group-item list-group-item-action"
+   (click)="onSelected()"
+   aria-current="true" *ngIf="recipe">
 	<div class="d-flex">
 		<div class="flex-grow-1 ms-3 pe-3">
 			<h5 class="mb-1">{{recipe.name}}</h5>
